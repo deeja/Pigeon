@@ -34,6 +34,10 @@
       <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Sitecore.Zip, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Zip.8.2.160729\lib\NET452\Sitecore.Zip.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -55,6 +59,80 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\Testlogs\Client.log.20170202.121404.txt">
+      <Link>TestLogs\Client.log.20170202.121404.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Testlogs\Client.log.20170202.txt">
+      <Link>TestLogs\Client.log.20170202.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Testlogs\Crawling.log.20170202.121404.txt">
+      <Link>TestLogs\Crawling.log.20170202.121404.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Testlogs\Crawling.log.20170202.txt">
+      <Link>TestLogs\Crawling.log.20170202.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Testlogs\Crawling.log.20170203.txt">
+      <Link>TestLogs\Crawling.log.20170203.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Testlogs\Fxm.log.20170202.121404.txt">
+      <Link>TestLogs\Fxm.log.20170202.121404.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Testlogs\Fxm.log.20170202.txt">
+      <Link>TestLogs\Fxm.log.20170202.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Testlogs\log.20170202.121404.txt">
+      <Link>TestLogs\log.20170202.121404.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Testlogs\log.20170202.txt">
+      <Link>TestLogs\log.20170202.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Testlogs\log.20170203.txt">
+      <Link>TestLogs\log.20170203.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Testlogs\Publishing.log.20170202.121404.txt">
+      <Link>TestLogs\Publishing.log.20170202.121404.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Testlogs\Publishing.log.20170202.txt">
+      <Link>TestLogs\Publishing.log.20170202.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Testlogs\readme.txt">
+      <Link>TestLogs\readme.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Testlogs\Search.log.20170202.121404.txt">
+      <Link>TestLogs\Search.log.20170202.121404.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Testlogs\Search.log.20170202.txt">
+      <Link>TestLogs\Search.log.20170202.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Testlogs\Search.log.20170203.txt">
+      <Link>TestLogs\Search.log.20170203.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Testlogs\WebDAV.log.20170202.121404.txt">
+      <Link>TestLogs\WebDAV.log.20170202.121404.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Testlogs\WebDAV.log.20170202.txt">
+      <Link>TestLogs\WebDAV.log.20170202.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
