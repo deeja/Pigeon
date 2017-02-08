@@ -7,6 +7,8 @@ namespace Pigeon.Zipper
     {
         public Stream ZipStream { get; set; }
 
+        public string[] Entries { get; set; }
+
         public void Dispose()
         {
             var fileStream = this.ZipStream;

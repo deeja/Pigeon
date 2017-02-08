@@ -20,18 +20,20 @@ namespace Pigeon.Zipper
             }
 
             var stream = new MemoryStream();
-            this.ZipFilesToStream(stream, fileList);
-            return new ZipResult() { ZipStream = stream };
+            var zipFilesToStream = this.ZipFilesToStream(stream, fileList);
+            return new ZipResult() { ZipStream = stream , Entries =  zipFilesToStream};
         }
 
 
-        private void ZipFilesToStream(Stream stream, IEnumerable<string> fileNames)
+        private string[] ZipFilesToStream(Stream stream, IEnumerable<string> fileNames)
         {
+            List<string> entries = new List<string>();
             using (var archive = new ZipArchive(stream, ZipArchiveMode.Create, true))
             {
                 foreach (var name in fileNames)
                 {
                     var entryName = Path.GetFileName(name);
+                    entries.Add(entryName);
                     ZipArchiveEntry archiveEntry = archive.CreateEntry(entryName, CompressionLevel.Optimal);
                     using (var entryStream = archiveEntry.Open())
                     {
@@ -39,10 +41,10 @@ namespace Pigeon.Zipper
                         {
                             fileStream.CopyTo(entryStream);
                         }
-                        
                     }
                 }
             }
+            return entries.ToArray();
         }
     }
 }

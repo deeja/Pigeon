@@ -36,12 +36,11 @@ Look for files with a pattern
 
 ###Zip files
 Take provided filenames 
-Add files to temp zip file
-
-- in: file names
-- in: output file name
-- out: single zip
-- out: list of log files contained in the zip and sizes
+Add files to temp zip file 
+- in: file names DONE 
+- in: -output file name- (uses a stream)
+- out: single zip (as stream) DONE
+- out: list of log files contained in the zip and sizes DONE
 
 
 ###Send files 

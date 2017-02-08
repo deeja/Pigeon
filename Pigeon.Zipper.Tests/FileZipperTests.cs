@@ -45,6 +45,16 @@ namespace Pigeon.Zipper.Tests
         }
 
         [Test]
+        public void ZipFiles_OneFile_ZipResultContainsFileLog()
+        {
+            FileZipper zipper = new FileZipper();
+            var readmeTxt = "readme.txt";
+            var fullPath = Path.Combine(GetTestLogDirectoryPath(), readmeTxt);
+            ZipResult zipResult = zipper.ZipFiles(new[] { fullPath });
+            Assert.AreEqual(readmeTxt, zipResult.Entries[0]);
+        }
+
+        [Test]
         public void ZipFiles_OneFile_ZipResultContainsFileWithCorrectContent()
         {
             FileZipper zipper = new FileZipper();
@@ -58,7 +68,7 @@ namespace Pigeon.Zipper.Tests
         }
 
         [Test]
-        public void ZipFiles_OneFile_ZipResultContainsMultipleFiles()
+        public void ZipFiles_ManyFiles_ZipResultContainsMultipleFiles()
         {
             var files = Directory.GetFiles(GetTestLogDirectoryPath(), "*.txt");
             Assert.Greater(files.Length, 5, "Missing Files for testing");
@@ -69,8 +79,19 @@ namespace Pigeon.Zipper.Tests
                 var entries = this.GetEntries(zipResult.ZipStream);
                 Assert.AreEqual(files.Length, entries.Count());
             }
+        }
 
-            
+        [Test]
+        public void ZipFiles_ManyFiles_ZipResultContainsMultipleFileEntries()
+        {
+            var files = Directory.GetFiles(GetTestLogDirectoryPath(), "*.txt");
+            Assert.Greater(files.Length, 5, "Missing Files for testing");
+
+            FileZipper zipper = new FileZipper();
+            using (ZipResult zipResult = zipper.ZipFiles(files))
+            {
+                Assert.AreEqual(files.Length, zipResult.Entries.Count());
+            }
         }
 
         private IEnumerable<ZipEntry> GetEntries(Stream zipStream)
@@ -81,7 +102,7 @@ namespace Pigeon.Zipper.Tests
 
         private ZipEntry GetEntry(Stream zipStream, string readme)
         {
-            return GetEntries(zipStream).FirstOrDefault(entry => entry.Name == readme);
+            return this.GetEntries(zipStream).FirstOrDefault(entry => entry.Name == readme);
         }
 
         [Test]
