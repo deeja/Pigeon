@@ -46,6 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FileZipper.cs" />
+    <Compile Include="IMailService.cs" />
+    <Compile Include="Mailer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ZipResult.cs" />
   </ItemGroup>
