@@ -14,6 +14,6 @@ You totally should be using an exception / error tracking tool; there are many o
 This is a _complimentary_ system. 
 
 ##Pigeon is not a log manager
-i.e. i.e. No zipping or deletion of logs
+i.e. No zipping or deletion of logs
 The deletion or zipping of logs is part of log management. This should be handled by a clean up task, or manually. 
 Pigeon is staying away from both of these tasks. Pigeon zips to a temp file, then posts that temp file, then deletes it. That's all.
