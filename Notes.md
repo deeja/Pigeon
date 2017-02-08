@@ -21,6 +21,10 @@ Future - Could add stats for showing how many files are in the logs, as well as 
 
 ##Development Plan
 
+### Loose ends
+- attachment name
+- log folder
+
 ###Start Job
 Add button
 Add scheduler
@@ -31,8 +35,9 @@ Add scheduler
 
 ###Find files
 Look for files with a pattern
-- in:date pattern
-- in:date range
+- in:log directory (DONE)
+- in:-date pattern- (Use the default yyyyMMdd.HHmmss) (DONE)
+- in:date range start/end
 - out:file names
 
 ###Zip files

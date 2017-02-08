@@ -56,6 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileFinderTests.cs" />
     <Compile Include="FileZipperTests.cs" />
     <Compile Include="MailerTests.cs" />
     <Compile Include="MailServiceStub.cs" />
@@ -111,36 +112,8 @@
       <Link>TestLogs\log.20170203.txt</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\Testlogs\Publishing.log.20170202.121404.txt">
-      <Link>TestLogs\Publishing.log.20170202.121404.txt</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\Testlogs\Publishing.log.20170202.txt">
-      <Link>TestLogs\Publishing.log.20170202.txt</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="..\Testlogs\readme.txt">
       <Link>TestLogs\readme.txt</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\Testlogs\Search.log.20170202.121404.txt">
-      <Link>TestLogs\Search.log.20170202.121404.txt</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\Testlogs\Search.log.20170202.txt">
-      <Link>TestLogs\Search.log.20170202.txt</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\Testlogs\Search.log.20170203.txt">
-      <Link>TestLogs\Search.log.20170203.txt</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\Testlogs\WebDAV.log.20170202.121404.txt">
-      <Link>TestLogs\WebDAV.log.20170202.121404.txt</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\Testlogs\WebDAV.log.20170202.txt">
-      <Link>TestLogs\WebDAV.log.20170202.txt</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

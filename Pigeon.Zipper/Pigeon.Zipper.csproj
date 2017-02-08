@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileFinder.cs" />
     <Compile Include="FileZipper.cs" />
     <Compile Include="Adapters\IMailService.cs" />
     <Compile Include="Mailer.cs" />
