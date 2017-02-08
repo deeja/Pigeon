@@ -48,6 +48,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Sitecore.Kernel, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Kernel.NoReferences.8.2.160729\lib\NET452\Sitecore.Kernel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -64,11 +68,28 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Unicorn, Version=3.3.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unicorn.Core.3.3.2\lib\net452\Unicorn.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Config\Include\Rainbow.config" />
+    <None Include="App_Config\Include\Pigeon.Configs.Default.config" />
+    <Content Include="App_Config\Include\Unicorn\Unicorn.zSharedSecret.config.example" />
+    <Content Include="App_Config\Include\Unicorn\Unicorn.UI.config" />
+    <Content Include="App_Config\Include\Unicorn\Unicorn.Remote.config.disabled" />
+    <Content Include="App_Config\Include\Unicorn\Unicorn.Deployed.config.disabled" />
+    <Content Include="App_Config\Include\Unicorn\Unicorn.DataProvider.config" />
+    <Content Include="App_Config\Include\Unicorn\Unicorn.CustomSerializationFolder.config.example" />
+    <Content Include="App_Config\Include\Unicorn\Unicorn.Configs.NewItemsOnly.example" />
+    <Content Include="App_Config\Include\Unicorn\Unicorn.Configs.Dependency.config.example" />
+    <Content Include="App_Config\Include\Unicorn\Unicorn.Configs.Default.example" />
+    <Content Include="App_Config\Include\Unicorn\Unicorn.config" />
+    <Content Include="App_Config\Include\Unicorn\Unicorn.AutoPublish.config" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
