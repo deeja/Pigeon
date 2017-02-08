@@ -57,10 +57,31 @@ namespace Pigeon.Zipper.Tests
             Assert.AreEqual("TEST_SUCCESS", text);
         }
 
-        private ZipEntry GetEntry(Stream zipStream, string readme)
+        [Test]
+        public void ZipFiles_OneFile_ZipResultContainsMultipleFiles()
+        {
+            var files = Directory.GetFiles(GetTestLogDirectoryPath(), "*.txt");
+            Assert.Greater(files.Length, 5, "Missing Files for testing");
+
+            FileZipper zipper = new FileZipper();
+            using (ZipResult zipResult = zipper.ZipFiles(files))
+            {
+                var entries = this.GetEntries(zipResult.ZipStream);
+                Assert.AreEqual(files.Length, entries.Count());
+            }
+
+            
+        }
+
+        private IEnumerable<ZipEntry> GetEntries(Stream zipStream)
         {
             ZipReader reader = new ZipReader(zipStream);
-            return reader.Entries.FirstOrDefault(entry => entry.Name == readme);
+            return reader.Entries;
+        }
+
+        private ZipEntry GetEntry(Stream zipStream, string readme)
+        {
+            return GetEntries(zipStream).FirstOrDefault(entry => entry.Name == readme);
         }
 
         [Test]
