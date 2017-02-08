@@ -5,9 +5,6 @@
     using System.IO;
     using System.Linq;
     using System.Text.RegularExpressions;
-    using System.Xml.Serialization.Configuration;
-
-    using Sitecore.Diagnostics;
 
     public class FileFinder
     {
@@ -16,7 +13,7 @@
         /// <summary>
         /// First group is the date, second is the time
         /// </summary>
-        static readonly Regex DateRegex = new Regex(@"\.(2[01][123][0-9][0-1][0-9][0-3][0-9])\.([0-2][0-9][0-5][0-9][0-5][0-9]){0,1}");
+        static readonly Regex DateRegex = new Regex(@"\.(2[01][123][0-9][0-1][0-9][0-3][0-9])\.([0-2][0-9][0-5][0-9][0-5][0-9]){0,1}", RegexOptions.Compiled);
 
         public FileFinder(string logDirectory)
         {
