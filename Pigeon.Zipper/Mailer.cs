@@ -5,17 +5,19 @@
 
     public class Mailer
     {
-        private readonly IMailService mailMock;
+        private readonly IMailService mailService;
 
-        public Mailer(IMailService mailMock)
+        public Mailer(IMailService mailService)
         {
-            this.mailMock = mailMock;
+            this.mailService = mailService;
         }
 
-        public void SendZip(ZipResult result, string emailAddress)
+        public void SendZip(ZipResult result, string emailAddress, string attachmentName)
         {
             string body = string.Join("\n\r",result.Entries);
-            mailMock.SendMessage(new MailMessage() {To = { emailAddress}, Body = body});
+
+            var attachment = new Attachment(result.ZipStream, attachmentName);
+            this.mailService.SendMessage(new MailMessage() {To = { emailAddress}, Body = body, Attachments = { attachment}});
         }
     }
 }

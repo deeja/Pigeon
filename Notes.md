@@ -28,6 +28,7 @@ Add scheduler
 - out: email address
 - out: date range
 
+
 ###Find files
 Look for files with a pattern
 - in:date pattern
@@ -46,10 +47,11 @@ Add files to temp zip file
 ###Send files 
 Add file to mail
 Send to email 
-- in: zip file 
-- in: email address
-- in: zip file contents
-- out: email message with attached file, list of log files and sizes
+in: log stats (DONE)
+in: attachment name (DONE)
+in: zip file (DONE)
+in: email address (DONE)
+out: email message with attached file, list of log files -and sizes- (DONE)
 
 
 
