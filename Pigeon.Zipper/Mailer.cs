@@ -3,6 +3,8 @@
     using System.Linq;
     using System.Net.Mail;
 
+    using Pigeon.Zipper.Adapters;
+
     public class Mailer
     {
         private readonly IMailService mailService;

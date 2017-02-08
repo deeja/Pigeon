@@ -1,4 +1,4 @@
-﻿namespace Pigeon.Zipper
+﻿namespace Pigeon.Zipper.Adapters
 {
     using System.Net.Mail;
 

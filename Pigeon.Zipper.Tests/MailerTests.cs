@@ -8,6 +8,8 @@
 
     using NUnit.Framework;
 
+    using Pigeon.Zipper.Adapters;
+
     [TestFixture]
     public class MailerTests
     {

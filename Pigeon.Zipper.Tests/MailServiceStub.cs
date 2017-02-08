@@ -2,6 +2,8 @@
 {
     using System.Net.Mail;
 
+    using Pigeon.Zipper.Adapters;
+
     public class MailServiceStub: IMailService
     {
         public MailMessage MailMessage { get; private set; }
