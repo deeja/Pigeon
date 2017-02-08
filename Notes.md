@@ -37,8 +37,8 @@ Add scheduler
 Look for files with a pattern
 - in:log directory (DONE)
 - in:-date pattern- (Use the default yyyyMMdd.HHmmss) (DONE)
-- in:date range start/end
-- out:file names
+- in:date range start/end (DONE)
+- out:file names (DONE)
 
 ###Zip files
 Take provided filenames 
@@ -52,11 +52,11 @@ Add files to temp zip file
 ###Send files 
 Add file to mail
 Send to email 
-in: log stats (DONE)
-in: attachment name (DONE)
-in: zip file (DONE)
-in: email address (DONE)
-out: email message with attached file, list of log files -and sizes- (DONE)
+- in: log stats (DONE)
+- in: attachment name (DONE)
+- in: zip file (DONE)
+- in: email address (DONE)
+- out: email message with attached file, list of log files -and sizes- (DONE)
 
 
 
