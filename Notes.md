@@ -2,6 +2,8 @@
 ### Remote Events
 Execute on cd server via remote event
 
+
+
 ###Scheduled task
 Click button or scheduled task
 
@@ -27,10 +29,18 @@ Future - Could add stats for showing how many files are in the logs, as well as 
 
 ###Start Job
 Add button
+
 Add scheduler
 - out: start job
 - out: email address
 - out: date range
+
+
+### Pipelines
+- <pigeon.executesendlogs>
+-- <pigeon.findfiles>
+-- <pigeon.zipfiles>
+-- <pigeon.sendfiles>
 
 
 ###Find files
