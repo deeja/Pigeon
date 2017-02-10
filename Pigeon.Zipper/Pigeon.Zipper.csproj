@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\SendToday.cs" />
+    <Compile Include="Commands\SendYesterday.cs" />
     <Compile Include="FileFinder.cs" />
     <Compile Include="FileZipper.cs" />
     <Compile Include="Adapters\IMailService.cs" />
