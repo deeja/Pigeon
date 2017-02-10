@@ -112,6 +112,7 @@
     <Content Include="..\Pigeon.Zipper\App_Config\Include\Pigeon\Pigeon.config">
       <Link>App_Config\Include\Pigeon\Pigeon.config</Link>
     </Content>
+    <Content Include="App_Config\Include\MailserverSetting.config" />
     <None Include="Properties\PublishProfiles\pigeonlocal.pubxml" />
     <None Include="Web.config" />
   </ItemGroup>
