@@ -2,6 +2,8 @@
 {
     using System;
 
+    using Pigeon.Zipper.Events;
+
     using Pipelines;
 
     using Sitecore.Pipelines;
@@ -11,12 +13,9 @@
     {
         public override void Execute(CommandContext context)
         {
-            var pipelineArgs = new PigeonPipelineArgs()
-                                   {
-                                       StartDateTime = DateTime.Today - TimeSpan.FromDays(1),
-                                       EndDateTime = DateTime.Today
-                                   };
-            CorePipeline.Run("pigeon.Execute", pipelineArgs);
+            var start = DateTime.Today - TimeSpan.FromDays(1);
+            var end = DateTime.Today;
+            EventRaiser.RaiseEvent(start, end);
         }
     }
 }
