@@ -4,6 +4,7 @@
 
     using Pigeon.Zipper.Pipelines;
 
+    using Sitecore.Diagnostics;
     using Sitecore.Events;
     using Sitecore.Pipelines;
 
@@ -23,7 +24,7 @@
         protected virtual void SendEventRemote(object sender, EventArgs args)
         {
             var sendFilesEventRemote = CreateSendFilesEventRemote(args);
-                        PipelineHelper.RunPipeline(sendFilesEventRemote.Start, sendFilesEventRemote.End);
+            PipelineHelper.RunPipeline(sendFilesEventRemote.Start, sendFilesEventRemote.End);
         }
 
         protected virtual void SendEvent(object sender, EventArgs args)

@@ -10,7 +10,6 @@
         {
             var parameters = new object[] { start, end};
             Sitecore.Events.Event.RaiseEvent(EventNames.Send, parameters);
-            Sitecore.Eventing.EventManager.QueueEvent(new SendFilesEventRemote(start, end));
         }
     }
 }
