@@ -30,14 +30,16 @@ namespace Pigeon.Zipper
             List<string> entries = new List<string>();
             using (var archive = new ZipArchive(stream, ZipArchiveMode.Create, true))
             {
-                foreach (var name in fileNames)
+                foreach (var path in fileNames)
                 {
-                    var entryName = Path.GetFileName(name);
-                    entries.Add(entryName);
+                    var entryName = Path.GetFileName(path); // get filename
+                    entries.Add(entryName);  // add to record of files that have been added 
+
                     ZipArchiveEntry archiveEntry = archive.CreateEntry(entryName, CompressionLevel.Optimal);
+
                     using (var entryStream = archiveEntry.Open())
                     {
-                        using (FileStream fileStream = new FileStream(name, FileMode.Open))
+                        using (FileStream fileStream = new FileStream(path, FileMode.Open,FileAccess.Read, FileShare.ReadWrite))
                         {
                             fileStream.CopyTo(entryStream);
                         }
