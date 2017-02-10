@@ -58,6 +58,7 @@
     <Compile Include="Pipelines\PigeonPipelineArgs.cs" />
     <Compile Include="Pipelines\PigeonPipelineProcessor.cs" />
     <Compile Include="Pipelines\EmailZip.cs" />
+    <Compile Include="Pipelines\SetEmailAddress.cs" />
     <Compile Include="Pipelines\SetLogDirectory.cs" />
     <Compile Include="Pipelines\ZipFiles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
