@@ -14,12 +14,19 @@
             this.mailService = mailService;
         }
 
-        public void SendZip(ZipResult result, string emailAddress, string attachmentName)
+        public void SendZip(ZipResult result, string emailAddress, string emailFrom, string attachmentName)
         {
-            string body = string.Join("\n\r",result.Entries);
+            string body = string.Join("\n\r", result.Entries);
 
             var attachment = new Attachment(result.ZipStream, attachmentName);
-            this.mailService.SendMessage(new MailMessage() {To = { emailAddress}, Body = body, Attachments = { attachment}});
+            var mailMessage = new MailMessage()
+            {
+                To = { emailAddress },
+                From = new MailAddress(emailFrom),
+                Body = body,
+                Attachments = { attachment }
+            };
+            this.mailService.SendMessage(mailMessage);
         }
     }
 }

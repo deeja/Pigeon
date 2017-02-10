@@ -16,8 +16,10 @@
 
         public ZipResult ZipResult { get; set; }
 
-        public string EmailAddress { get; set; }
+        public string EmailTo { get; set; }
 
         public string AttachmentName { get; set; }
+
+        public string EmailFrom { get; set; }
     }
 }
