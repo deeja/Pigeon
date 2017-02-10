@@ -28,7 +28,8 @@
                 ZipStream = new MemoryStream()
             };
             string emailAddress = "testaddress@something.com";
-            mailer.SendZip(result, emailAddress, emailAddress, this.attachmentName);
+            string subject = "This is the subject";
+            mailer.SendZip(result, emailAddress, emailAddress, subject, this.attachmentName);
             mailMock.Verify(service => service.SendMessage(It.IsAny<MailMessage>()));
         }
 
@@ -42,9 +43,10 @@
                 Entries = new string[0],
                 ZipStream = new MemoryStream()
             };
-            string emailAddress = "testaddress@something.com";
-            mailer.SendZip(result, emailAddress, emailAddress, this.attachmentName);
-            Assert.AreEqual(emailAddress, mailService.MailMessage.To.First().Address);
+            string emailAddressto = "testaddressto@something.com";
+            string subject = "this is the subject";
+            mailer.SendZip(result, emailAddressto, emailAddress, subject, this.attachmentName);
+            Assert.AreEqual(emailAddressto, mailService.MailMessage.To.First().Address);
         }
 
         [Test]
@@ -59,7 +61,8 @@
             };
             string emailTo = "testaddressto@something.com";
             string emailFrom = "testaddressfrom@something.com";
-            mailer.SendZip(result, emailTo,emailFrom, attachmentName);
+            string subject = "this is the subject";
+            mailer.SendZip(result, emailAddress, emailFrom, subject, this.attachmentName);
             Assert.AreEqual(emailFrom, mailService.MailMessage.From.Address);
         }
 
@@ -75,7 +78,8 @@
                 Entries = new[] { thisisoneTxt },
                 ZipStream = new MemoryStream()
             };
-            mailer.SendZip(result, emailAddress, emailAddress, this.attachmentName);
+            string subject = "this is the subject";
+            mailer.SendZip(result, emailAddress, emailAddress, subject, this.attachmentName);
             var body = mailService.MailMessage.Body;
             Assert.IsTrue(body.Contains(thisisoneTxt), "Message body does not contain the entry " + thisisoneTxt);
         }
@@ -90,7 +94,8 @@
                 Entries = new string[0],
                 ZipStream = new MemoryStream()
             };
-            mailer.SendZip(result, emailAddress, emailAddress, this.attachmentName);
+            string subject = "this is the subject";
+            mailer.SendZip(result, emailAddress, emailAddress, subject, this.attachmentName);
             var attachmentCollection = mailService.MailMessage.Attachments;
             Assert.AreEqual(1, attachmentCollection.Count);
         }
@@ -106,7 +111,8 @@
                 Entries = new string[0],
                 ZipStream = memoryStream
             };
-            mailer.SendZip(result, emailAddress, emailAddress, this.attachmentName);
+            string subject = "this is the subject";
+            mailer.SendZip(result, emailAddress, emailAddress, subject, this.attachmentName);
             var attachmentCollection = mailService.MailMessage.Attachments;
             Assert.AreSame(memoryStream, attachmentCollection.First().ContentStream);
         }
@@ -122,9 +128,27 @@
                 Entries = new string[0],
                 ZipStream = memoryStream
             };
-            mailer.SendZip(result, emailAddress, emailAddress, this.attachmentName);
+            string subject = "this is the subject";
+            mailer.SendZip(result, emailAddress, emailAddress, subject, this.attachmentName);
             var attachmentCollection = mailService.MailMessage.Attachments;
             Assert.AreEqual(attachmentName, attachmentCollection.First().Name);
+        }
+
+        [Test]
+        public void SendMail_MailMessageCorrectSubject()
+        {
+            MailServiceStub mailService = new MailServiceStub();
+            Mailer mailer = new Mailer(mailService);
+            var memoryStream = new MemoryStream();
+            ZipResult result = new ZipResult()
+            {
+                Entries = new string[0],
+                ZipStream = memoryStream
+            };
+            string subject = "this is the subject";
+            mailer.SendZip(result, emailAddress, emailAddress, subject, this.attachmentName);
+            var mailMessage = mailService.MailMessage;
+            Assert.AreEqual(subject, mailMessage.Subject);
         }
     }
 }

@@ -68,6 +68,7 @@
     <Compile Include="Pipelines\EmailZip.cs" />
     <Compile Include="Pipelines\PipelineHelper.cs" />
     <Compile Include="Pipelines\SetAttachmentName.cs" />
+    <Compile Include="Pipelines\SetEmailSubject.cs" />
     <Compile Include="Pipelines\SetEmailAddresses.cs" />
     <Compile Include="Pipelines\SetLogDirectory.cs" />
     <Compile Include="SettingKeys.cs" />

@@ -14,7 +14,7 @@
             this.mailService = mailService;
         }
 
-        public void SendZip(ZipResult result, string emailAddress, string emailFrom, string attachmentName)
+        public void SendZip(ZipResult result, string emailAddress, string emailFrom, string subject, string attachmentName)
         {
             string body = string.Join("\n\r", result.Entries);
 
@@ -24,7 +24,8 @@
                                       To = { emailAddress },
                                       From = new MailAddress(emailFrom),
                                       Body = body,
-                                      Attachments = { attachment }
+                                      Attachments = { attachment },
+                                      Subject = subject
                                   };
             this.mailService.SendMessage(mailMessage);
         }

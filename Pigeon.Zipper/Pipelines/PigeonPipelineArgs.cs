@@ -21,5 +21,7 @@
         public string AttachmentName { get; set; }
 
         public string EmailFrom { get; set; }
+
+        public string Subject { get; set; }
     }
 }

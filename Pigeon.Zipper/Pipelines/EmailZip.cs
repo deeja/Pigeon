@@ -12,8 +12,10 @@
             Assert.IsNotNull(args.ZipResult,"args.ZipResult != null");
             Assert.IsNotNullOrEmpty(args.EmailTo,"args.EmailTo != null");
             Assert.IsNotNullOrEmpty(args.AttachmentName,"args.AttachmentName != null");
+            Assert.IsNotNullOrEmpty(args.Subject,"args.Subject != null");
 
-            new Mailer(new MailService()).SendZip(args.ZipResult, args.EmailTo, args.EmailFrom, args.AttachmentName);
+            var mailer = new Mailer(new MailService());
+            mailer.SendZip(args.ZipResult, args.EmailTo, args.EmailFrom, args.Subject, args.AttachmentName);
         }
     }
 }
