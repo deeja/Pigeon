@@ -4,6 +4,7 @@
 
     using Pigeon.Zipper.Pipelines;
 
+    using Sitecore.Events;
     using Sitecore.Pipelines;
 
     public class EventHandlers
@@ -16,13 +17,13 @@
 
         private void RaiseRemoteEvent(SendFilesEventRemote myEvent)
         {
-            Sitecore.Events.Event.RaiseEvent(EventNames.SendRemote, myEvent.Start, myEvent.End);
+            Event.RaiseEvent(EventNames.SendRemote, myEvent.Start, myEvent.End);
         }
 
         protected virtual void SendEventRemote(object sender, EventArgs args)
         {
             var sendFilesEventRemote = CreateSendFilesEventRemote(args);
-            PipelineHelper.RunPipeline(sendFilesEventRemote.Start, sendFilesEventRemote.End);
+                        PipelineHelper.RunPipeline(sendFilesEventRemote.Start, sendFilesEventRemote.End);
         }
 
         protected virtual void SendEvent(object sender, EventArgs args)
@@ -33,12 +34,10 @@
 
         private static SendFilesEventRemote CreateSendFilesEventRemote(EventArgs args)
         {
-            var startDate = Sitecore.Events.Event.ExtractParameter<string>(args, 0);
-            var endDate = Sitecore.Events.Event.ExtractParameter<string>(args, 1);
-            var e = new SendFilesEventRemote(
-                EventDateHelper.DeserialiseDate(startDate),
-                EventDateHelper.DeserialiseDate(endDate));
-            return e;
+            SitecoreEventArgs sea = (SitecoreEventArgs)args;
+            DateTime startDate = (DateTime)sea.Parameters[0];
+            DateTime endDate = (DateTime)sea.Parameters[1];
+            return new SendFilesEventRemote(startDate, endDate);
         }
     }
 }

@@ -8,7 +8,7 @@
     {
         public void SendMessage(MailMessage mailMessage)
         {
-            MainUtil.SendMailAsync(mailMessage);
+            MainUtil.SendMail(mailMessage);
         }
     }
 }

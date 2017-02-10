@@ -20,12 +20,12 @@
 
             var attachment = new Attachment(result.ZipStream, attachmentName);
             var mailMessage = new MailMessage()
-            {
-                To = { emailAddress },
-                From = new MailAddress(emailFrom),
-                Body = body,
-                Attachments = { attachment }
-            };
+                                  {
+                                      To = { emailAddress },
+                                      From = new MailAddress(emailFrom),
+                                      Body = body,
+                                      Attachments = { attachment }
+                                  };
             this.mailService.SendMessage(mailMessage);
         }
     }
