@@ -13,6 +13,9 @@ Click button or scheduled task
 - configure email from
 - configure email to
 
+### Attachment name
+- Add date time replacement tokens {datetime}
+
 ###Email
 
 Test email? - No, can test by clicking send logs button.
