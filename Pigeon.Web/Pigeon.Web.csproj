@@ -109,11 +109,18 @@
     <Content Include="App_Config\Include\Unicorn\Unicorn.Configs.Default.example" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.config" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.AutoPublish.config" />
+    <Content Include="App_Config\Include\Pigeon\Pigeon.config" />
     <None Include="Properties\PublishProfiles\pigeonlocal.pubxml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pigeon.Zipper\Pigeon.Zipper.csproj">
+      <Project>{cd1b3d89-2722-45de-b1f8-7c62d6fa74a3}</Project>
+      <Name>Pigeon.Zipper</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
