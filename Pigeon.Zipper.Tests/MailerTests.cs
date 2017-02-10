@@ -150,5 +150,50 @@
             var mailMessage = mailService.MailMessage;
             Assert.AreEqual(subject, mailMessage.Subject);
         }
+
+        [Test]
+        public void SendMail_MailMessageNoStream_NoAttachment()
+        {
+            MailServiceStub mailService = new MailServiceStub();
+            Mailer mailer = new Mailer(mailService);
+            ZipResult result = new ZipResult()
+            {
+                Entries = new string[0],
+                ZipStream = null
+            };
+            string subject = "this is the subject";
+            mailer.SendZip(result, emailAddress, emailAddress, subject, this.attachmentName);
+            var mailMessage = mailService.MailMessage;
+            Assert.IsEmpty(mailMessage.Attachments, "Shouldn't be any attachments");
+        }
+
+        [Test]
+        public void SendMail_MailMessageNoEntries_BodySaysNoFiles()
+        {
+            MailServiceStub mailService = new MailServiceStub();
+            Mailer mailer = new Mailer(mailService);
+            ZipResult result = new ZipResult()
+            {
+                Entries = new string[0]
+            };
+            string subject = "this is the subject";
+            mailer.SendZip(result, emailAddress, emailAddress, subject, this.attachmentName);
+            var mailMessage = mailService.MailMessage;
+            Assert.IsTrue(mailMessage.Body.Contains("No files found for range specified"));
+
+        }
+
+        [Test]
+        public void SendMail_MailMessageNullResult_BodySaysNoFiles()
+        {
+            MailServiceStub mailService = new MailServiceStub();
+            Mailer mailer = new Mailer(mailService);
+            ZipResult result = null;
+            string subject = "this is the subject";
+            mailer.SendZip(result, emailAddress, emailAddress, subject, this.attachmentName);
+            var mailMessage = mailService.MailMessage;
+            Assert.IsTrue(mailMessage.Body.Contains("No files found for range specified"));
+
+        }
     }
 }
