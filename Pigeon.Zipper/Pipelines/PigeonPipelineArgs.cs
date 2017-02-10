@@ -13,5 +13,7 @@
         public string[] FoundFiles { get; set; }
 
         public string FileDirectory { get; set; }
+
+        public ZipResult ZipResult { get; set; }
     }
 }
