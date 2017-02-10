@@ -7,7 +7,7 @@ DB: core
 SharedFields:
 - ID: "4c2dedb4-40fb-4166-8221-c4dd3e914478"
   Hint: Click
-  Value: "pigeon:sendyesterdays"
+  Value: "pigeon:sendyesterday"
 - ID: "56776edf-261c-4abc-9fe7-70c618795239"
   Hint: __Help link
   Value: 
