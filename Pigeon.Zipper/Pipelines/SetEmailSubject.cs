@@ -9,7 +9,7 @@
         public override void Process(PigeonPipelineArgs args)
         {
             Assert.IsNotNull(args,"args != null");
-            args.Subject = $"[Pigeon] {System.Web.Hosting.HostingEnvironment.ApplicationHost.GetSiteName()} {Environment.MachineName} - Date Range: {args.StartDateTime:O} -> {args.EndDateTime:O}";
+            args.Subject = $"[Pigeon] {System.Web.Hosting.HostingEnvironment.ApplicationHost.GetSiteName()} {Environment.MachineName} - Date Range: {args.StartDateTime:G} -> {args.EndDateTime:G}";
         }
     }
 }
