@@ -1,7 +1,9 @@
 ﻿namespace Pigeon
 {
+    using System.IO;
     using System.Linq;
     using System.Net.Mail;
+    using System.Net.Mime;
 
     using Pigeon.Adapters;
 
@@ -16,9 +18,7 @@
 
         public void SendZip(ZipResult result, string emailAddress, string emailFrom, string subject, string attachmentName)
         {
-
             string body;
-
             if (result != null && result.Entries.Any())
             {
                 body = string.Join("\n\r", result.Entries);
@@ -27,7 +27,6 @@
             {
                 body = "No files found for range specified";
             }
-
             var mailMessage = new MailMessage()
                                   {
                                       To = { emailAddress },
@@ -35,13 +34,17 @@
                                       Body = body,
                                       Subject = subject
                                   };
-
-            if (result?.ZipStream != null)
+            using (mailMessage)
             {
-                mailMessage.Attachments.Add(new Attachment(result.ZipStream, attachmentName));
-            }
+                if (result?.ZipStream != null)
+                {
+                    result.ZipStream.Position = 0;
+                    Attachment attachment = new Attachment(result.ZipStream, attachmentName + ".zip", MediaTypeNames.Application.Zip);
+                    mailMessage.Attachments.Add(attachment);
+                }
 
-            this.mailService.SendMessage(mailMessage);
+                this.mailService.SendMessage(mailMessage); 
+            }
         }
     }
 }
