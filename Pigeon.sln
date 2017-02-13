@@ -5,11 +5,11 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pigeon.Web", "Pigeon.Web\Pigeon.Web.csproj", "{4D3E3C11-EBD8-4327-B619-FE509D53F0C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pigeon", "Pigeon.Zipper\Pigeon.csproj", "{CD1B3D89-2722-45DE-B1F8-7C62D6FA74A3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pigeon", "Pigeon\Pigeon.csproj", "{CD1B3D89-2722-45DE-B1F8-7C62D6FA74A3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{5BD08305-D80C-4A83-B4ED-AD5ACF251E4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pigeon.Tests", "Pigeon.Zipper.Tests\Pigeon.Tests.csproj", "{610743ED-2C91-4155-8965-3CD3FAD058C7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pigeon.Tests", "Pigeon.Tests\Pigeon.Tests.csproj", "{610743ED-2C91-4155-8965-3CD3FAD058C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

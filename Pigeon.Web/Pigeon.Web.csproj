@@ -109,10 +109,13 @@
     <Content Include="App_Config\Include\Unicorn\Unicorn.Configs.Default.example" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.config" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.AutoPublish.config" />
-    <Content Include="..\Pigeon.Zipper\App_Config\Include\Pigeon\Pigeon.config">
+    <Content Include="App_Config\Include\MailserverSetting.config" />
+    <Content Include="..\Pigeon\App_Config\Include\Pigeon\Pigeon.config">
       <Link>App_Config\Include\Pigeon\Pigeon.config</Link>
     </Content>
-    <Content Include="App_Config\Include\MailserverSetting.config" />
+    <Content Include="..\Pigeon\App_Config\Include\Pigeon\Pigeon.Override.config.example">
+      <Link>App_Config\Include\Pigeon\Pigeon.Override.config.example</Link>
+    </Content>
     <None Include="Properties\PublishProfiles\pigeonlocal.pubxml" />
     <None Include="Web.config" />
   </ItemGroup>
@@ -120,7 +123,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Pigeon.Zipper\Pigeon.csproj">
+    <ProjectReference Include="..\Pigeon\Pigeon.csproj">
       <Project>{cd1b3d89-2722-45de-b1f8-7c62d6fa74a3}</Project>
       <Name>Pigeon</Name>
     </ProjectReference>

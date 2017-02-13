@@ -63,7 +63,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Pigeon.Zipper\Pigeon.csproj">
+    <ProjectReference Include="..\Pigeon\Pigeon.csproj">
       <Project>{cd1b3d89-2722-45de-b1f8-7c62d6fa74a3}</Project>
       <Name>Pigeon</Name>
     </ProjectReference>
