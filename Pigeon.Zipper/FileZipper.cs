@@ -1,5 +1,6 @@
 ﻿namespace Pigeon
 {
+    using System;
     using System.Collections.Generic;
     using System.IO;
     using System.IO.Compression;
@@ -14,14 +15,14 @@
                 return null;
             }
 
-            var stream = new MemoryStream();
-            var zipFilesToStream = this.ZipFilesToStream(stream, fileList);
-            return new ZipResult() { ZipStream = stream , Entries =  zipFilesToStream};
+            Tuple<Stream, string[]> zipFilesToStream = this.ZipFilesToStream(fileList);
+            return new ZipResult() { ZipStream = zipFilesToStream.Item1 , Entries =  zipFilesToStream.Item2};
         }
 
 
-        private string[] ZipFilesToStream(Stream stream, IEnumerable<string> fileNames)
+        private Tuple<Stream, string[]> ZipFilesToStream(IEnumerable<string> fileNames)
         {
+            var stream = new MemoryStream();
             List<string> entries = new List<string>();
             using (var archive = new ZipArchive(stream, ZipArchiveMode.Create, true))
             {
@@ -41,7 +42,7 @@
                     }
                 }
             }
-            return entries.ToArray();
+            return new Tuple<Stream, string[]>(stream, entries.ToArray());
         }
     }
 }
