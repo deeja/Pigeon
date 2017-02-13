@@ -17,3 +17,33 @@ This is a _complimentary_ system.
 i.e. No zipping or deletion of logs
 The deletion or zipping of logs is part of log management. This should be handled by a clean up task, or manually. 
 Pigeon is staying away from both of these tasks. Pigeon zips to a temp file, then posts that temp file, then deletes it. That's all.
+
+##Configuration
+There are two settings that must be overridden from the config:
+      <setting name="Pigeon.Email.To" value="setme@example.com" />
+      <setting name="Pigeon.Email.From" value="setme@example.com" />
+
+There is an example file called Pigeon.Override.config.example that can used as the base for this override.
+
+##Use
+After installation, enable the Developer Toolbar in the content editor (right click main toolbar to select Developer Toolbar).
+You can choose from the options there. 
+
+There is also a scheduled task that can be enabled by changing the end date to a point in the future. 
+/sitecore/system/Tasks/Schedules/Pigeon/Pigeon Yesterdays Logs
+
+##Installing locally
+1. Set the unicorn serialisation folder to the correct location. This is done in the _Unicorn.CustomSerializationFolder.config_ file. It should point to the Unicorn folder in the root of this Solution. e.g C:\projects\Pigeon\Unicorn\$(configurationName)
+2. Publish Pigeon.Web to your sitecore instance (right click -> Publish). If debugging, make sure you select _Debug_ and not _Release_. 
+3. Run the Unicorn Sync [site]/Unicorn.aspx
+4. Modify the Pigeon.Override.Config.example settings to match your server's settings
+
+##Building the packages
+### Sitecore package
+There is a file called Pigeon.package that can be opened in Visual Studio with Sitecore Rocks. 
+1. Publish the web project to a local site
+2. Click "Build" on the Pigeon.package toolbar
+
+### CD Server Nuget package
+1. Run _nuget pack Pigeon-CD.nuspec -Version 1.0.0_
+
