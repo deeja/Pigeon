@@ -87,6 +87,7 @@ There is also a scheduled task that can be enabled by changing the end date to a
     <xfiles>
       <Entries>
         <x-item>/App_Config/Include/Pigeon</x-item>
+        <x-item>/bin/Pigeon.dll</x-item>
       </Entries>
       <Converter>
         <FileToEntryConverter>
