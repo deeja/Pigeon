@@ -7,6 +7,12 @@
     using Sitecore.Events;
     using Sitecore.Pipelines;
 
+    /// <summary>
+    /// Handle the events that created from the pigeon code
+    /// </summary>
+    /// <remarks>
+    /// Set up in the style noted at http://sitecore-community.github.io/docs/pipelines-and-events/events/
+    /// </remarks>
     public class EventHandlers
     {
         public virtual void InitializeFromPipeline(PipelineArgs args)

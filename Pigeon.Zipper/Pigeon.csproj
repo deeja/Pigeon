@@ -74,6 +74,7 @@
     <Compile Include="SettingKeys.cs" />
     <Compile Include="Pipelines\ZipFiles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tasks\SendLogs.cs" />
     <Compile Include="ZipResult.cs" />
   </ItemGroup>
   <ItemGroup>
