@@ -1,0 +1,119 @@
+<project site="pigeon" format="Zip Package" targetfilefolder="wwwroot">
+  <Metadata>
+    <metadata>
+      <PackageName>Pigeon</PackageName>
+      <Author>deeja</Author>
+      <Version>1.0.0</Version>
+      <Revision />
+      <License>MIT License
+
+Copyright (c) [year] [fullname]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</License>
+      <Comment />
+      <Attributes />
+      <Readme>Configuration:
+There are two settings that must be overridden from the config:
+      &lt;setting name="Pigeon.Email.To" value="setme@example.com" /&gt;
+      &lt;setting name="Pigeon.Email.From" value="setme@example.com" /&gt;
+
+There is an example file called Pigeon.Override.config.example that can used as the base for this override.
+
+Use:
+After installation, enable the Developer Toolbar in the content editor (right click main toolbar to select Developer Toolbar).
+You can choose from the options there. 
+
+There is also a scheduled task that can be enabled by changing the end date to a point in the future. 
+/sitecore/system/Tasks/Schedules/Pigeon/Pigeon Yesterdays Logs
+
+
+
+
+
+</Readme>
+      <Publisher>deeja</Publisher>
+      <PostStep />
+      <PackageID />
+    </metadata>
+  </Metadata>
+  <SaveProject>True</SaveProject>
+  <Sources>
+    <xitems>
+      <Entries>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Chunks/Pigeon/{8D876561-7114-4C41-9EFC-4BB07A8A8E8C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Tasks/Commands/Pigeon/{1E6446B5-6E69-40FB-907B-2EC311D3FC36}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Tasks/Schedules/Pigeon/{241878FB-EDBE-4AB4-99DF-A7A07F5EA2F6}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Tasks/Commands/Pigeon/PigeonYesterday/{BA639B8A-34A5-4A8D-8B86-094B8B545FD5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Tasks/Schedules/Pigeon/Pigeon Yesterdays Logs/{5EA1834C-6665-469D-A73D-58DEF6F2220D}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Strips/Developer/Pigeon/{58E87814-9C61-4CA7-8B84-EFF45D4723BF}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Chunks/Pigeon/Today/{D7575467-FB69-4EA5-8D75-8B44A9C294E3}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Chunks/Pigeon/Yesterday/{5CC50DEC-4DE1-4796-8423-8472B9D28C1C}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Items</Name>
+    </xitems>
+    <xfiles>
+      <Entries>
+        <x-item>/App_Config/Include/Pigeon</x-item>
+      </Entries>
+      <Converter>
+        <FileToEntryConverter>
+          <Root />
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Files</Name>
+    </xfiles>
+  </Sources>
+  <Converter>
+    <TrivialConverter>
+      <Transforms />
+    </TrivialConverter>
+  </Converter>
+  <Include />
+  <Exclude />
+  <Name />
+</project>
