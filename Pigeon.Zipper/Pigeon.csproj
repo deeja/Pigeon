@@ -78,6 +78,7 @@
     <Compile Include="ZipResult.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App_Config\Include\Pigeon\Pigeon.Override.config.example" />
     <None Include="packages.config" />
     <Content Include="App_Config\Include\Pigeon\Pigeon.config" />
   </ItemGroup>
