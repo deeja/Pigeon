@@ -1,4 +1,4 @@
-﻿namespace Pigeon.Zipper
+﻿namespace Pigeon
 {
     public static class SettingKeys
     {

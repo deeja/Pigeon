@@ -1,8 +1,6 @@
-﻿namespace Pigeon.Zipper.Events
+﻿namespace Pigeon.Events
 {
     using System;
-
-    using Pigeon.Zipper.Pipelines;
 
     public static class EventRaiser
     {

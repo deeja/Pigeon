@@ -1,14 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Pigeon.Zipper
+﻿namespace Pigeon
 {
+    using System.Collections.Generic;
     using System.IO;
     using System.IO.Compression;
-
-    using Sitecore.Zip;
+    using System.Linq;
 
     public class FileZipper
     {

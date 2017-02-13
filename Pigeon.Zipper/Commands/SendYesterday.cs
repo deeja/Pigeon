@@ -1,12 +1,10 @@
-﻿namespace Pigeon.Zipper.Commands
+﻿namespace Pigeon.Commands
 {
     using System;
 
-    using Pigeon.Zipper.Events;
+    using Pigeon.Events;
+    using Pigeon.Pipelines;
 
-    using Pipelines;
-
-    using Sitecore.Pipelines;
     using Sitecore.Shell.Framework.Commands;
 
     public class SendYesterday: Command

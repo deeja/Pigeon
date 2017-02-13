@@ -1,8 +1,8 @@
-﻿namespace Pigeon.Zipper.Tests
+﻿namespace Pigeon.Tests
 {
     using System.Net.Mail;
 
-    using Pigeon.Zipper.Adapters;
+    using Pigeon.Adapters;
 
     public class MailServiceStub: IMailService
     {

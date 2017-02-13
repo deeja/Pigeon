@@ -1,6 +1,6 @@
-﻿namespace Pigeon.Zipper.Pipelines
+﻿namespace Pigeon.Pipelines
 {
-    using Pigeon.Zipper.Adapters;
+    using Pigeon.Adapters;
 
     using Sitecore.Diagnostics;
 

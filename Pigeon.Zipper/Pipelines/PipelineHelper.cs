@@ -1,4 +1,4 @@
-﻿namespace Pigeon.Zipper.Pipelines
+﻿namespace Pigeon.Pipelines
 {
     using System;
 

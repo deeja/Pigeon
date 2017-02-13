@@ -1,4 +1,4 @@
-﻿namespace Pigeon.Zipper
+﻿namespace Pigeon
 {
     using System;
     using System.Globalization;

@@ -1,9 +1,8 @@
-﻿namespace Pigeon.Zipper.Pipelines
+﻿namespace Pigeon.Pipelines
 {
     using System;
 
     using Sitecore.Diagnostics;
-    using Sitecore.Web;
 
     public class SetEmailSubject:PigeonPipelineProcessor
     {

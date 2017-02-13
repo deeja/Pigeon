@@ -7,8 +7,8 @@
     <ProjectGuid>{610743ED-2C91-4155-8965-3CD3FAD058C7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Pigeon.Zipper.Tests</RootNamespace>
-    <AssemblyName>Pigeon.Zipper.Tests</AssemblyName>
+    <RootNamespace>Pigeon.Tests</RootNamespace>
+    <AssemblyName>Pigeon.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -63,9 +63,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Pigeon.Zipper\Pigeon.Zipper.csproj">
+    <ProjectReference Include="..\Pigeon.Zipper\Pigeon.csproj">
       <Project>{cd1b3d89-2722-45de-b1f8-7c62d6fa74a3}</Project>
-      <Name>Pigeon.Zipper</Name>
+      <Name>Pigeon</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

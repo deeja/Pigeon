@@ -7,8 +7,8 @@
     <ProjectGuid>{CD1B3D89-2722-45DE-B1F8-7C62D6FA74A3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Pigeon.Zipper</RootNamespace>
-    <AssemblyName>Pigeon.Zipper</AssemblyName>
+    <RootNamespace>Pigeon</RootNamespace>
+    <AssemblyName>Pigeon</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

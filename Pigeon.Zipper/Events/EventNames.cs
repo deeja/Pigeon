@@ -1,4 +1,4 @@
-﻿namespace Pigeon.Zipper.Events
+﻿namespace Pigeon.Events
 {
     public static class EventNames
     {

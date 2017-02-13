@@ -1,9 +1,8 @@
-﻿namespace Pigeon.Zipper.Pipelines
+﻿namespace Pigeon.Pipelines
 {
     using System.IO;
 
     using Sitecore.Diagnostics;
-    using Sitecore.Pipelines;
 
     public class FindLogs: PigeonPipelineProcessor
     {

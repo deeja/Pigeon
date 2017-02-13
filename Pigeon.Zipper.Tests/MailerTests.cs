@@ -1,4 +1,4 @@
-﻿namespace Pigeon.Zipper.Tests
+﻿namespace Pigeon.Tests
 {
     using System.IO;
     using System.Linq;
@@ -8,7 +8,7 @@
 
     using NUnit.Framework;
 
-    using Pigeon.Zipper.Adapters;
+    using Pigeon.Adapters;
 
     [TestFixture]
     public class MailerTests
@@ -131,7 +131,7 @@
             string subject = "this is the subject";
             mailer.SendZip(result, emailAddress, emailAddress, subject, this.attachmentName);
             var attachmentCollection = mailService.MailMessage.Attachments;
-            Assert.AreEqual(attachmentName, attachmentCollection.First().Name);
+            Assert.AreEqual(this.attachmentName, attachmentCollection.First().Name);
         }
 
         [Test]

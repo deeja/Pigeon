@@ -1,10 +1,9 @@
-﻿namespace Pigeon.Zipper.Events
+﻿namespace Pigeon.Events
 {
     using System;
 
-    using Pigeon.Zipper.Pipelines;
+    using Pigeon.Pipelines;
 
-    using Sitecore.Diagnostics;
     using Sitecore.Events;
     using Sitecore.Pipelines;
 

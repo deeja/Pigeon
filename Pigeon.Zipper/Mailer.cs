@@ -1,9 +1,9 @@
-﻿namespace Pigeon.Zipper
+﻿namespace Pigeon
 {
     using System.Linq;
     using System.Net.Mail;
 
-    using Pigeon.Zipper.Adapters;
+    using Pigeon.Adapters;
 
     public class Mailer
     {
