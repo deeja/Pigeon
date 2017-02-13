@@ -23,5 +23,12 @@
         public string EmailFrom { get; set; }
 
         public string Subject { get; set; }
+
+        protected override void Dispose()
+        {
+            var zipResult = this.ZipResult;
+            zipResult?.Dispose();
+            base.Dispose();
+        }
     }
 }
