@@ -2,5 +2,6 @@
   <settings>
       <setting name="Pigeon.Email.To" set:value="setme@example.com" />
       <setting name="Pigeon.Email.From" set:value="setme@example.com" />
+      <setting name="Pigeon.AttachmentName" set:value="PigeonLogSender" />
     </settings>
 </configuration>
