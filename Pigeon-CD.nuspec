@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Pigeon</id>
+        <version>1.0.0</version>
+        <authors>deeja</authors>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Contains the update package for Pigeon</description>
+        <releaseNotes />
+    </metadata>
+    <files>
+        <file src="build\App_Config\Include\Pigeon\Pigeon.config" target="App_Config\Include\Pigeon\Pigeon.config" />
+        <file src="build\App_Config\Include\Pigeon\Pigeon.Override.config.example" target="App_Config\Include\Pigeon\Pigeon.Override.config.example" />
+        <file src="build\bin\Pigeon.dll" target="bin\Pigeon.dll" />
+    </files>
+</package>
