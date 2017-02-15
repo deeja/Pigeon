@@ -27,8 +27,10 @@ Pigeon is staying away from both of these tasks. Pigeon zips to a temp file, the
 
 ##Configuration
 There are two settings that must be overridden from the config:
+```
       <setting name="Pigeon.Email.To" value="setme@example.com" />
       <setting name="Pigeon.Email.From" value="setme@example.com" />
+```
 
 There is an example file called Pigeon.Override.config.example that can used as the base for this override.
 
