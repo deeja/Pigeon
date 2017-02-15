@@ -1,7 +1,14 @@
-#Pigeon Sitecore Log Emailer
+#Pigeon Sitecore Log (and More) Emailer
 
 ##How Pigeon works
 Either through a scheduled task, or clicking the button, a email is sent containing the zipped logs from a defined period.
+
+## The "And More" bit
+Pigeon has a pipeline that can be extended to include other files in the final zip. The pipeline can also be modified to:
+
+- Swap out the mailer to change the way the message is delived (Event Message Queue?)
+- Add (or remove) files to list that are zipped and sent.
+- Extend the zipper to use a password or private key
 
 ##Why is Pigeon beneficial
 If running multiple servers, such as CD servers, it can be difficult to access the log files. If they are difficult to access, then they are often neglected. 
