@@ -39,9 +39,14 @@ After installation, enable the Developer Toolbar in the content editor (right cl
 You can choose from the options there. 
 
 There is also a scheduled task that can be enabled by changing the end date to a point in the future. 
-/sitecore/system/Tasks/Schedules/Pigeon/Pigeon Yesterdays Logs
+`/sitecore/system/Tasks/Schedules/Pigeon/Pigeon Yesterdays Logs`
 
-##Installing locally
+##Installation
+### Basic installation on Content Management and Delivery servers
+Look under the releases for the install package https://github.com/deeja/Pigeon/releases 
+There is a Content Delivery version provided as a Nuget package. This should be compatible with Octopus Deploy or your own projects.
+
+### Installing for development purposes
 1. Set the unicorn serialisation folder to the correct location. This is done in the _Unicorn.CustomSerializationFolder.config_ file. It should point to the Unicorn folder in the root of this Solution. e.g C:\projects\Pigeon\Unicorn\$(configurationName)
 2. Publish Pigeon.Web to your sitecore instance (right click -> Publish). If debugging, make sure you select _Debug_ and not _Release_. 
 3. Run the Unicorn Sync [site]/Unicorn.aspx
